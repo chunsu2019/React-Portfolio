@@ -1,0 +1,214 @@
+.works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6em;
+}
+.works h1 {
+  color: white;
+  font-size: 3em;
+  text-shadow: 4px 4px 0px black;
+  position: relative;
+}
+.works h1::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 0.1em;
+  bottom: -0.1em;
+  left: 0;
+  background-color: white;
+}
+.works .projectContainer {
+  width: 70%;
+  margin-top: 6em;
+  margin-bottom: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  box-shadow: 15px 15px 2px 1px rgba(0, 255, 64, 0.2);
+}
+@media (min-width: 873px) {
+  .works .projectContainer {
+    flex-direction: row;
+    align-items: flex-start;
+    height: 20rem;
+  }
+  .works .projectContainer:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+.works .projectContainer .projectImg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.works .projectContainer .projectImg > img {
+  width: 100%;
+  height: 13rem;
+  cursor: pointer;
+}
+@media (min-width: 873px) {
+  .works .projectContainer .projectImg > img {
+    height: 100%;
+  }
+}
+.works .projectContainer .projectImg > img:hover {
+  opacity: 0.15;
+}
+.works .projectContainer .projectImg > .projectImgOverlay {
+  position: absolute;
+  top: 0;
+  background: darkslategrey;
+  width: 100%;
+  height: 13rem;
+  z-index: -1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.works .projectContainer .projectImg > .projectImgOverlay .icon {
+  width: 45px;
+  height: 45px;
+}
+@media (min-width: 873px) {
+  .works .projectContainer .projectImg > .projectImgOverlay {
+    width: 100%;
+    height: 100%;
+  }
+}
+.works .projectContainer .projectDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(to right, rgba(4, 186, 177, 0.5), rgba(20, 245, 219, 0.5));
+  padding: 1em;
+}
+@media (min-width: 873px) {
+  .works .projectContainer .projectDescription {
+    height: 100%;
+    position: relative;
+    justify-content: space-between;
+    padding: 3em;
+    font-size: 1rem;
+  }
+}
+.works .projectContainer .projectDescription h2 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 0.2em;
+  text-shadow: 0 0 5px black;
+  margin-bottom: 1em;
+}
+.works .projectContainer .projectDescription p {
+  text-align: center;
+  text-shadow: 0 0 5px black;
+  margin-bottom: 1em;
+}
+@media (min-width: 830px) and (max-width: 1331px) {
+  .works .projectContainer .projectDescription p {
+    font-size: 0.75rem;
+  }
+}
+.works .projectContainer .projectDescription .iconsContainer {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+.works .projectContainer .projectDescription .iconsContainer > a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.5em;
+  border: solid white;
+  border-radius: 10px;
+}
+.works .projectContainer .projectDescription .faIcon {
+  cursor: pointer;
+}
+.works .projectsCarousel {
+  margin-top: 3em;
+  width: 30%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+@media (max-width: 873px) {
+  .works .projectsCarousel {
+    width: 60%;
+  }
+}
+.works .projectsCarousel .arrowContainer {
+  width: 95%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  margin-top: 3em;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  color: whitesmoke;
+  z-index: 1;
+}
+.works .projectsCarousel .arrowContainer .arrowIcon {
+  cursor: pointer;
+}
+.works .projectsCarousel .arrowContainer .arrowIcon:hover {
+  transform: scale(1.5);
+}
+.works .projectsCarousel .carouselItem {
+  margin-top: 2em;
+  width: 90%;
+  height: 200px;
+  display: none;
+}
+.works .projectsCarousel .carouselItem p {
+  text-align: center;
+  width: 70%;
+}
+@media (max-width: 873px) {
+  .works .projectsCarousel .carouselItem p {
+    font-size: 0.7rem;
+  }
+}
+.works .projectsCarousel .carouselItem .sp-icon {
+  cursor: pointer;
+}
+.works .projectsCarousel .carouselItem.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to right, rgba(4, 186, 177, 0.5), rgba(20, 245, 219, 0.5));
+  -webkit-animation: appear 1s ease-out;
+          animation: appear 1s ease-out;
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=works.css.map */

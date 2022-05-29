@@ -1,0 +1,54 @@
+.intro {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.introContainer p {
+  font-size: 1.8rem;
+  margin-bottom: 1.7em;
+  text-shadow: 0 0 5px black;
+}
+@media (min-width: 873px) {
+  .introContainer p {
+    font-size: 2.5rem;
+  }
+}
+.introContainer p span {
+  font-size: 2.2rem;
+  color: #ffaa0b;
+  text-shadow: 3px 3px 0px black;
+}
+@media (min-width: 873px) {
+  .introContainer p span {
+    font-size: 3.1rem;
+  }
+}
+.introContainer a {
+  text-decoration: none;
+  color: white;
+}
+.introContainer a > button {
+  margin-top: 1em;
+  padding: 0.6em 2em;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, rgba(4, 186, 177, 0.5), rgba(20, 245, 219, 0.5));
+  font-size: 1.6em;
+  font-weight: bold;
+  color: inherit;
+}
+.introContainer a > button:hover {
+  background-color: #1bc7be;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-2px);
+}/*# sourceMappingURL=intro.css.map */
